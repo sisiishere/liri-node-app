@@ -35,8 +35,8 @@ if(arguments[2] == "concert-this"){
     var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
 
 axios.get(queryURL).then(
-    function(response) {
-      console.log(response);
+    function(response) {  
+       console.log(response.data[0]); 
   console.log(response.Runtime);
 });
 }
@@ -83,7 +83,7 @@ if(arguments[2] == "do-what-it-says") {
 
             axios.get(queryURL).then(
                 function(response) {
-                  console.log(response);
+                  console.log(response.data[0]);
               console.log(response.Runtime);
             });   
         }
